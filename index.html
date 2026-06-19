@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norwest Asia — Asian Representative of Norwest Marine Service AS, Norway</title>
+    <meta name="description" content="Genuine & OEM-equivalent spare parts for Wärtsilä, MAN, Caterpillar, Jenbacher, and 30+ engine brands. Marine, power generation, mining, construction.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a1f3c;
+            --navy-light: #14325a;
+            --navy-dark: #061328;
+            --gold: #c9a84c;
+            --gold-light: #e0c878;
+            --white: #ffffff;
+            --offwhite: #f5f7fa;
+            --gray: #6b7b8f;
+            --gray-light: #d1d9e3;
+            --text: #1e293b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.65;
+            background: var(--white);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(10,31,60,0.96);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 0 24px;
+            border-bottom: 1px solid rgba(201,168,76,0.15);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-mark {
+            width: 40px; height: 40px;
+            background: var(--gold);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            color: var(--navy);
+            letter-spacing: 1px;
+        }
+        .logo-text {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+        .logo-text span {
+            display: block;
+            font-size: 10px;
+            font-weight: 400;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 1px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold);
+            color: var(--navy) !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--gold-light); }
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero */
+        .hero {
+            background: var(--navy);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 64px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(20,50,90,0.5) 0%, transparent 50%);
+        }
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201,168,76,0.12);
+            border: 1px solid rgba(201,168,76,0.3);
+            color: var(--gold);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .hero-badge::before {
+            content: '';
+            width: 6px; height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero h1 em {
+            color: var(--gold);
+            font-style: normal;
+        }
+        .hero-sub {
+            font-size: 18px;
+            color: rgba(255,255,255,0.65);
+            max-width: 520px;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+        .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1.5px solid rgba(255,255,255,0.25);
+        }
+        .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 24px 28px;
+            backdrop-filter: blur(10px);
+        }
+        .stat-card h3 {
+            color: var(--gold);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .stat-card p {
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+        .hero-brands {
+            margin-top: 8px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .hero-brands p {
+            color: rgba(255,255,255,0.4);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+        .brand-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .brand-tag {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        /* Section styling */
+        section { padding: 100px 24px; }
+        .section-inner { max-width: 1200px; margin: 0 auto; }
+        .section-label {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .section-desc {
+            font-size: 17px;
+            color: var(--gray);
+            max-width: 640px;
+            line-height: 1.7;
+        }
+
+        /* About */
+        .about { background: var(--offwhite); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .about-left p {
+            color: var(--text);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .about-left p strong { color: var(--navy); }
+        .cred-row {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+        .cred-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            padding: 14px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--gray-light);
+        }
+        .cred-icon {
+            width: 36px; height: 36px;
+            background: var(--navy);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        .cred-item div { line-height: 1.3; }
+        .cred-item strong {
+            display: block;
+            font-size: 13px;
+            color: var(--navy);
+        }
+        .cred-item span {
+            font-size: 12px;
+            color: var(--gray);
+        }
+        .about-right {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid var(--gray-light);
+        }
+        .about-right h4 {
+            font-size: 14px;
+            color: var(--navy);
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        .about-right ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .about-right li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .about-right li::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* Capabilities */
+        .caps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .cap-card {
+            background: var(--white);
+            border: 1px solid var(--gray-light);
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+        .cap-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 12px 40px rgba(10,31,60,0.08);
+            transform: translateY(-4px);
+        }
+        .cap-num {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .cap-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .cap-card p {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        .cap-card ul {
+            list-style: none;
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .cap-card li {
+            font-size: 13px;
+            color: var(--text);
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.5;
+        }
+        .cap-card li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        .cap-card.full-width {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .cap-card.full-width .cap-parts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px 20px;
+        }
+        .cap-card.full-width .cap-parts li {
+            font-size: 13px;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--offwhite);
+        }
+
+        /* Brands */
+        .brands { background: var(--navy); color: var(--white); }
+        .brands .section-title { color: var(--white); }
+        .brands .section-desc { color: rgba(255,255,255,0.55); }
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+        }
+        .brand-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 28px;
+            transition: all 0.3s;
+        }
+        .brand-card:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: rgba(201,168,76,0.3);
+        }
+        .brand-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+        .brand-card .origin {
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+        }
+        .brand-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .brand-card li {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.5;
+        }
+
+        /* Sectors */
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+        }
+        .sector-card {
+            background: var(--white);
+            border: 1px solid var(--gray-light);
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+        .sector-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 8px 30px rgba(10,31,60,0.06);
+        }
+        .sector-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sector-card h3::before {
+            content: '';
+            width: 4px; height: 20px;
+            background: var(--gold);
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+        .sector-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .sector-card li {
+            font-size: 13px;
+            color: var(--gray);
+            padding-left: 14px;
+            position: relative;
+            line-height: 1.5;
+        }
+        .sector-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        /* Why Choose */
+        .why { background: var(--offwhite); }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+        }
+        .why-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 32px;
+            border: 1px solid var(--gray-light);
+        }
+        .why-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+        .why-card p {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* Approach */
+        .approach-box {
+            background: var(--navy);
+            border-radius: 16px;
+            padding: 60px;
+            margin-top: 48px;
+            color: var(--white);
+        }
+        .approach-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        .approach-box p {
+            color: rgba(255,255,255,0.7);
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-bottom: 32px;
+        }
+        .approach-box ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px 40px;
+        }
+        .approach-box li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.85);
+        }
+        .approach-box li::before {
+            content: '';
+            width: 20px; height: 20px;
+            background: var(--gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: var(--navy);
+            font-weight: 700;
+            content: '✓';
+        }
+
+        /* Contact */
+        .contact { background: var(--navy); color: var(--white); text-align: center; }
+        .contact .section-title { color: var(--white); }
+        .contact .section-desc { color: rgba(255,255,255,0.55); margin: 0 auto 40px; }
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 18px 28px;
+            border-radius: 10px;
+        }
+        .contact-item .icon {
+            width: 40px; height: 40px;
+            background: var(--gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .contact-item div { text-align: left; }
+        .contact-item strong {
+            display: block;
+            font-size: 13px;
+            color: var(--gold);
+            margin-bottom: 2px;
+        }
+        .contact-item a, .contact-item span {
+            font-size: 15px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-item a:hover { color: var(--gold); }
+        .contact-reg {
+            color: rgba(255,255,255,0.35);
+            font-size: 12px;
+            margin-top: 24px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy-dark);
+            padding: 40px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        footer p {
+            color: rgba(255,255,255,0.35);
+            font-size: 13px;
+        }
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 960px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+            .hero h1 { font-size: 38px; }
+            .about-grid { grid-template-columns: 1fr; }
+            .caps-grid { grid-template-columns: 1fr; }
+            .cap-card.full-width { grid-template-columns: 1fr; }
+            .cap-card.full-width .cap-parts { grid-template-columns: 1fr; }
+            .brands-grid { grid-template-columns: 1fr; }
+            .sectors-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .approach-box { padding: 40px 28px; }
+            .approach-box ul { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+        }
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 32px; }
+            .section-title { font-size: 30px; }
+            section { padding: 60px 20px; }
+            .contact-grid { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="#" class="logo">
+            <div class="logo-mark">NOR</div>
+            <div class="logo-text">Norwest Asia<span>Asian Representative</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#capabilities">Capabilities</a></li>
+            <li><a href="#brands">Brands</a></li>
+            <li><a href="#sectors">Sectors</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="hero-inner">
+        <div class="hero-left">
+            <div class="hero-badge">QuantiParts Distributor — Asia</div>
+            <h1>Genuine & OEM-Equivalent <em>Engine Spare Parts</em> for Asia</h1>
+            <p class="hero-sub">Asian operating arm of Norwest Marine Service AS, Norway. Supplying critical spare parts, technical cross-referencing, and on-site engineering support for medium-speed and legacy diesel & gas engines across marine, power generation, mining, and industrial sectors.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Request a Quote →</a>
+                <a href="#capabilities" class="btn btn-outline">Explore Capabilities</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="stat-card">
+                <h3>30+</h3>
+                <p>Engine brands & platforms supported</p>
+            </div>
+            <div class="stat-card">
+                <h3>897/1000</h3>
+                <p>Parent company Delphi/Experian credit score</p>
+            </div>
+            <div class="stat-card">
+                <h3>Global</h3>
+                <p>Deployable technical teams & European supply network</p>
+            </div>
+            <div class="hero-brands">
+                <p>Key Platforms</p>
+                <div class="brand-tags">
+                    <span class="brand-tag">Wärtsilä</span>
+                    <span class="brand-tag">MAN B&W</span>
+                    <span class="brand-tag">Caterpillar</span>
+                    <span class="brand-tag">Jenbacher</span>
+                    <span class="brand-tag">MWM</span>
+                    <span class="brand-tag">Niigata</span>
+                    <span class="brand-tag">Yanmar</span>
+                    <span class="brand-tag">Mitsubishi</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="section-inner">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">Norwegian Heritage. Asian Reach. Engineering Discipline.</h2>
+        <div class="about-grid">
+            <div class="about-left">
+                <p><strong>Norwest Asia</strong> is the Asian operating arm of <strong>Norwest Marine Service AS</strong>, a Norwegian marine and industrial engineering company established in Avaldsnes, Western Norway. Through our affiliation with the Norway-based head office, we serve as the official <strong>QuantiParts distributor for the Asian region</strong> — part of a global network specializing in genuine and OEM-equivalent spare parts for legacy and medium-speed diesel engines.</p>
+                <p>Our parent company holds a <strong>Delphi/Experian credit score of 897/1000</strong> and is <strong>ISPS certified</strong> by the Norwegian Coastal Administration (Kystverket) for port facility security compliance — credentials that reflect operational discipline and financial reliability.</p>
+                <p>All commercial transactions, quotations, and invoicing are administered directly by <strong>Perjalanan Malaysia</strong>. Company Registration: <strong>202603033065 (003820257-K)</strong>.</p>
+                <div class="cred-row">
+                    <div class="cred-item">
+                        <div class="cred-icon">★</div>
+                        <div><strong>897/1000</strong><span>Credit Score</span></div>
+                    </div>
+                    <div class="cred-item">
+                        <div class="cred-icon">⚓</div>
+                        <div><strong>ISPS Certified</strong><span>Kystverket, Norway</span></div>
+                    </div>
+                    <div class="cred-item">
+                        <div class="cred-icon">🌐</div>
+                        <div><strong>QuantiParts</strong><span>Official Distributor</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-right">
+                <h4>What Sets Us Apart</h4>
+                <ul>
+                    <li>Official QuantiParts distributor with direct access to genuine & OEM legacy parts networks in Norway and the Netherlands</li>
+                    <li>Specialists in discontinued, obsolete, and hard-to-find components — our signature capability</li>
+                    <li>Full material certification and genuine provenance documentation on every part</li>
+                    <li>Technical cross-referencing from engine serial numbers, photographs, or dimensional data</li>
+                    <li>Globally deployable engineering teams for on-site troubleshooting and overhaul supervision</li>
+                    <li>Flexible supply models — from single critical spares to complete overhaul support packages</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="capabilities" id="capabilities">
+    <div class="section-inner">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Five Core Capabilities</h2>
+        <p class="section-desc">We do not hold a static product catalogue — the range is too vast. Instead, we maintain a comprehensive brand and platform reference, and we identify the exact part you need from your engine data, OEM number, or dimensional specification.</p>
+
+        <div class="caps-grid">
+            <div class="cap-card full-width">
+                <div>
+                    <div class="cap-num">01</div>
+                    <h3>Genuine & OEM-Equivalent Spare Parts Supply</h3>
+                    <p>We source and deliver critical spare parts for medium-speed and heavy-duty engines across marine, power generation, mining, construction, and industrial sectors worldwide.</p>
+                </div>
+                <ul class="cap-parts">
+                    <li>Cylinder liners, piston crowns, piston rings, connecting rods</li>
+                    <li>Main bearings, conrod bearings, thrust bearings, camshaft bearings</li>
+                    <li>Fuel injection pumps, injectors, nozzles, high-pressure pipes</li>
+                    <li>Cylinder heads, valve seats, valve guides, valve springs, rotators</li>
+                    <li>Gasket sets (top/bottom), O-rings, lip seals, manifold gaskets</li>
+                    <li>Lube oil pumps, fuel transfer pumps, cooling water pumps, bilge pumps</li>
+                    <li>Complete overhaul kits (partial or full)</li>
+                    <li>Filtration systems — lube oil, fuel, air intake, hydraulic</li>
+                    <li>Separator components (Westfalia, Alfa Laval)</li>
+                    <li>Turbocharger cartridges, compressor wheels, nozzle rings</li>
+                    <li>Ignition coils, spark plugs, pre-chamber components (gas engines)</li>
+                    <li>Hydraulic pumps, motors, cylinders, seals, and control valves</li>
+                </ul>
+            </div>
+
+            <div class="cap-card">
+                <div class="cap-num">02</div>
+                <h3>Technical Cross-Referencing & Parts Identification</h3>
+                <p>Engine serial number worn? Nameplate missing? Part number obsolete? Our engineering team identifies the correct replacement from multiple data sources.</p>
+                <ul>
+                    <li>Engine nameplate data and serial numbers</li>
+                    <li>Photographs, dimensional measurements, and sample analysis</li>
+                    <li>OEM technical drawings and microfiche archives</li>
+                    <li>Reverse engineering for obsolete components</li>
+                    <li>Cross-reference to modern equivalents</li>
+                </ul>
+            </div>
+
+            <div class="cap-card">
+                <div class="cap-num">03</div>
+                <h3>On-Site Technical Support & Engineering Deployment</h3>
+                <p>Our engineering teams are globally deployable at short notice for troubleshooting, commissioning, overhaul supervision, and training.</p>
+                <ul>
+                    <li>On-site troubleshooting and fault diagnosis</li>
+                    <li>Commissioning of new engines and auxiliary systems</li>
+                    <li>Supervision of major overhauls and rebuilds</li>
+                    <li>Condition assessment and maintenance planning</li>
+                    <li>Technical advisory for fleet-wide parts consolidation</li>
+                </ul>
+            </div>
+
+            <div class="cap-card">
+                <div class="cap-num">04</div>
+                <h3>Obsolete, Hard-to-Source & Legacy Part Solutions</h3>
+                <p>Primary dealers discontinued support? OEM no longer stocks the part? This is our signature capability: solving the problems others abandon.</p>
+                <ul>
+                    <li>Specialist sourcing through European network</li>
+                    <li>Remanufacturing partners and OEM-equivalent suppliers</li>
+                    <li>Reverse engineering and custom manufacturing</li>
+                    <li>Full certification and traceability documentation</li>
+                </ul>
+            </div>
+
+            <div class="cap-card">
+                <div class="cap-num">05</div>
+                <h3>Procurement Outsourcing & MRO Integration</h3>
+                <p>For clients with fragmented procurement across multiple sites and engine types, we become your single point of contact.</p>
+                <ul>
+                    <li>Annual MRO parts forecasting</li>
+                    <li>Sourcing and consolidated delivery</li>
+                    <li>Inventory management and consignment stock</li>
+                    <li>Framework agreements with fixed pricing</li>
+                    <li>Monthly reporting and consumption analytics</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="brands" id="brands">
+    <div class="section-inner">
+        <div class="section-label">Engine Brands & Platforms</div>
+        <h2 class="section-title">Comprehensive Brand Authority Reference</h2>
+        <p class="section-desc">The following represents the engine manufacturers and specific platforms for which Norwest Asia supplies genuine and OEM-equivalent spare parts, technical support, and overhaul solutions. For any specific part enquiry, we cross-reference against OEM part numbers, engine serial numbers, or dimensional data.</p>
+
+        <div class="brands-grid">
+            <div class="brand-card">
+                <h4>Wärtsilä</h4>
+                <div class="origin">Finland</div>
+                <ul>
+                    <li>Vasa 32, Vasa 46 (all variants)</li>
+                    <li>50DF, 34SG / 34DF</li>
+                    <li>L20, L26 medium-speed diesel</li>
+                    <li>20V / 32V / 46V V-engine configs</li>
+                    <li>Auxiliary engines and gensets</li>
+                    <li>Wärtsilä-Sulzer legacy components</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>MAN B&W / MAN Energy Solutions</h4>
+                <div class="origin">Germany / Denmark</div>
+                <ul>
+                    <li>L16/24, L21/31, L27/38, L32/40</li>
+                    <li>32/40, 48/60, 51/60DF</li>
+                    <li>S26MC–S50MC, L35MC–L70MC (2-stroke legacy)</li>
+                    <li>K98MC, K90MC, K80MC</li>
+                    <li>Alpha lubrication systems</li>
+                    <li>TCA / TCR turbochargers</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Caterpillar / MAK</h4>
+                <div class="origin">USA / Germany</div>
+                <ul>
+                    <li>MAK M20, M25, M32, M43, M46, M551</li>
+                    <li>Cat 3406, 3408, 3412, 3508, 3512, 3516, 3520</li>
+                    <li>Cat C32, C280, G3600 series</li>
+                    <li>Legacy D399, D398</li>
+                    <li>Mining & construction genset engines</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>INNIO Jenbacher</h4>
+                <div class="origin">Austria — formerly GE</div>
+                <ul>
+                    <li>Type 2: J208, J212, J216, J220</li>
+                    <li>Type 3: J312, J316, J320, J324</li>
+                    <li>Type 4: J412, J416, J420, J424</li>
+                    <li>Type 6: J612, J616, J620, J624</li>
+                    <li>Type 9: J920 FleXtra</li>
+                    <li>Ignition, pre-chambers, spark plugs, controls</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>SEMT Pielstick</h4>
+                <div class="origin">France — now MAN Energy Solutions</div>
+                <ul>
+                    <li>PC2-5, PC2-6</li>
+                    <li>PA4-200, PA6-280, PA6-320</li>
+                    <li>PC4-570</li>
+                    <li>Legacy PA and PC series</li>
+                    <li>Cross-reference to MAN equivalents</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Bergen</h4>
+                <div class="origin">Norway — Rolls-Royce / Kongsberg</div>
+                <ul>
+                    <li>B32:40, B33:45, B35:40</li>
+                    <li>C25:33, C26:33</li>
+                    <li>K / KV series (legacy)</li>
+                    <li>B36:45V, B36:45L (gas)</li>
+                    <li>Auxiliary and genset applications</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Niigata</h4>
+                <div class="origin">Japan</div>
+                <ul>
+                    <li>6L16HX, 6L21/31, 6L25/31</li>
+                    <li>6M26.3, 6M31.4</li>
+                    <li>8L21/31, 8L25/31</li>
+                    <li>12V16/24, 16V16/24</li>
+                    <li>6M28BG, 8M28BG (gas variants)</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Yanmar</h4>
+                <div class="origin">Japan</div>
+                <ul>
+                    <li>6EY18, 6EY26, 6EY33</li>
+                    <li>6N18, 6N21, 6N26, 6N330</li>
+                    <li>6GL-HT, 6GL-UT</li>
+                    <li>M200, M220 series</li>
+                    <li>T240, T260, T280</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Mitsubishi Heavy Industries</h4>
+                <div class="origin">Japan</div>
+                <ul>
+                    <li>S6A2, S6A3, S6R, S6R2, S12A2, S12R, S16R</li>
+                    <li>S6B3, S6B, S12B</li>
+                    <li>UEC45, UEC52, UEC60, UEC75, UEC85</li>
+                    <li>LSE / LSE-Eco series (low-speed)</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Daihatsu</h4>
+                <div class="origin">Japan</div>
+                <ul>
+                    <li>DK-20, DK-28, DK-36</li>
+                    <li>DL-16, DL-19, DL-22, DL-26, DL-28, DL-32</li>
+                    <li>DS-18, DS-22, DS-26, DS-28, DS-32</li>
+                    <li>DC-17, DC-32, DE-18, DE-23, DE-28</li>
+                    <li>6DE-18, 6DE-23, 6DE-28</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Deutz MWM / Cat Energy Solutions</h4>
+                <div class="origin">Germany</div>
+                <ul>
+                    <li>TCG 2015 (V8, V12, V16, V20)</li>
+                    <li>TCG 2020 (V12, V16, V20)</li>
+                    <li>TCG 2032 (V12, V16)</li>
+                    <li>TBG 604, TBG 620, TBG 632</li>
+                    <li>Legacy 234, 604, 620 series</li>
+                    <li>Biogas & natural gas applications</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Stork Werkspoor</h4>
+                <div class="origin">Netherlands — legacy</div>
+                <ul>
+                    <li>TM410, TM620</li>
+                    <li>RHO 216, RHO 228, RHO 330</li>
+                    <li>SW280, SW360, SW400</li>
+                    <li>Obsolete part solutions & remanufacturing</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Sulzer</h4>
+                <div class="origin">Switzerland — legacy, now Wärtsilä</div>
+                <ul>
+                    <li>ZA40S, ZA50S (medium-speed)</li>
+                    <li>RTA48, RTA52, RTA58, RTA62, RTA72, RTA84, RTA96</li>
+                    <li>RND68, RND76, RND90 (legacy)</li>
+                    <li>Cross-reference to Wärtsilä-Sulzer equivalents</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Ruston</h4>
+                <div class="origin">UK — legacy, now MAN Energy Solutions</div>
+                <ul>
+                    <li>RK270, RK280, RK215</li>
+                    <li>AP230, AP200</li>
+                    <li>Obsolete part sourcing & remanufacturing</li>
+                    <li>Cross-reference to MAN equivalents</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Mirrlees Blackstone</h4>
+                <div class="origin">UK — legacy</div>
+                <ul>
+                    <li>ESL16, ESL25, ESL36, ESL40, ESL48, ESL56</li>
+                    <li>MB275, MB430</li>
+                    <li>K Major, ESL Major series</li>
+                    <li>Reverse engineering & remanufacturing</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>ABC — Anglo Belgian Corporation</h4>
+                <div class="origin">Belgium</div>
+                <ul>
+                    <li>DZC (medium-speed diesel)</li>
+                    <li>DZ (gas / dual-fuel variants)</li>
+                    <li>Auxiliary engine components</li>
+                    <li>Marine and industrial applications</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Cummins</h4>
+                <div class="origin">USA — Construction, Mining, Power Gen</div>
+                <ul>
+                    <li>KTA19, KTA38, KTA50 (industrial)</li>
+                    <li>QSK19, QSK38, QSK45, QSK60, QSK78 (mining)</li>
+                    <li>QST30, QSX15 (construction)</li>
+                    <li>NT855, N14 (legacy)</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Komatsu</h4>
+                <div class="origin">Japan — Mining & Heavy Equipment</div>
+                <ul>
+                    <li>SAA6D170, SAA12V170 (haul truck)</li>
+                    <li>SAA6D140, SAA6D125 (excavator)</li>
+                    <li>HD785, HD1500 haul truck engines</li>
+                    <li>PC8000, PC5500 excavator engines</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Volvo Penta</h4>
+                <div class="origin">Sweden — Marine & Industrial</div>
+                <ul>
+                    <li>D13, D16 (marine/industrial)</li>
+                    <li>TAD134, TAD164, TAD165 (genset)</li>
+                    <li>IPS components</li>
+                    <li>Marine genset & auxiliary applications</li>
+                </ul>
+            </div>
+            <div class="brand-card">
+                <h4>Parker Kittiwake</h4>
+                <div class="origin">UK — Condition Monitoring</div>
+                <ul>
+                    <li>Lube oil analysis kits and reagents</li>
+                    <li>Ferrography and particle counting</li>
+                    <li>On-site testing equipment & calibration</li>
+                    <li>Condition monitoring program support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectors" id="sectors">
+    <div class="section-inner">
+        <div class="section-label">Sectors & Applications</div>
+        <h2 class="section-title">Ten Sectors. One Standard.</h2>
+        <p class="section-desc">From offshore platforms to palm oil mills, we support mission-critical engine operations across Asia's most demanding industries.</p>
+
+        <div class="sectors-grid">
+            <div class="sector-card">
+                <h3>Marine & Offshore</h3>
+                <ul>
+                    <li>Main propulsion — cargo vessels, tankers, bulk carriers, LNG</li>
+                    <li>Auxiliary engines — gensets, pumps, compressors, firefighting</li>
+                    <li>Offshore support — PSVs, AHTS, crew boats, platform supply</li>
+                    <li>Dredging fleets, tugboats, fishing vessels, yachts</li>
+                    <li>Separator systems (Westfalia, Alfa Laval), turbochargers, hydraulics</li>
+                    <li>Ballast water treatment system pumps and auxiliaries</li>
+                </ul>
+            </div>
+            <div class="sector-card">
+                <h3>Power Generation & Renewable Energy</h3>
+                <ul>
+                    <li>Biogas power plants — Jenbacher, Cat, MWM (palm oil, food, municipal waste)</li>
+                    <li>CCGT auxiliary engines, solar/wind farm construction gensets</li>
+                    <li>CHP, grid stability, emergency backup for utilities</li>
+                    <li>Gas engine ignition, spark plugs, pre-chamber components</li>
+                    <li>BESS auxiliary cooling and power</li>
+                </ul>
+            </div>
+            <div class="sector-card">
+                <h3>Mining & Smelting</h3>
+                <ul>
+                    <li>Open-cut haul truck fleets — Cat 797, Komatsu 930E</li>
+                    <li>Underground rail haulage diesel engines</li>
+                    <li>Processing plant power generation — Wärtsilä, Cat, MAN gensets</li>
+                    <li>Smelter auxiliary engines, hydrometallurgy 24/7 support</li>
+                    <li>Remote site logistics, legacy fleet obsolete parts</li>
+                    <li>Fleet-wide parts consolidation and condition monitoring</li>
+                </ul>
+            </div>
+            <div class="sector-card">
+                <h3>Cement & Heavy Industry</h3>
+                <ul>
+                    <li>Cement kiln auxiliary engines — ID fans, pumps, blowers</li>
+                    <li>Raw mill and crusher engine maintenance</li>
+                    <li>Quarry equipment — excavators, loaders, haul trucks, drills</li>
+                    <li>Ready-mix truck fleet engine parts and pump maintenance</li>
+                    <li>Cross-plant parts consolidation and emergency sourcing</li>
+                </ul>
+            </div>
+            <div class="sector-card">
+                <h3>Construction & Infrastructure</h3>
+                <ul>
+                    <li>Mega-project construction gensets — build-phase power supply</li>
+                    <li>Crane and lifting equipment — hydraulic and engine-driven</li>
+                    <li>Heavy transport fleet — trucks, bulldozers, graders, compactors</li>
+                    <li>Concrete batching plant engine maintenance and mixer drives</li>
+                    <li>TBM auxiliary power, piling rig engines, road construction equipment</li>
+                    <li>On-site technical support and remote site logistics</li>
+                </ul>
+            </div>
+            <div class="sector-card">
+                <h3>Oil & Gas / Petrochemical</h3>
+                <ul>
+                    <li>Offshore platform main and auxiliary engine maintenance</li>
+                    <li>POME treatment system engines and drives</li>
+                    <li>Anaerobic digester mechanical equipment — agitators, pumps, blowers</li>
+                    <li>BioCNG project compressor and auxiliary engine components</li>
+                    <li>H₂S scrubber and gas conditioning pump and compressor parts</li>
+                    <li>Refinery auxiliary power and pipeline compressor station maintenance</li>
+                </ul>
+            </div>
+            <div class="sector-card">
+                <h3>Rail & Transport</h3>
+                <ul>
+                    <li>Underground mining rail haulage diesel engines</li>
+                    <li>Port prime mover fleets — terminal tractors, RTGs, straddle carriers</li>
+                    <li>Rail maintenance-of-way equipment — tampers, ballast regulators</li>
+                    <li>Locomotive auxiliary power units and gensets</li>
+                    <li>Legacy rail engine platform support and obsolete parts</li>
+                </ul>
+            </div>
+            <div class="sector-card">
+                <h3>Water & Waste Treatment</h3>
+                <ul>
+                    <li>POME treatment system engines and pump drives</li>
+                    <li>Anaerobic digester agitator drives and pump engines</li>
+                    <li>Screw press drives, decanter motors, centrifuge components</li>
+                    <li>Desalination plant pump and auxiliary power systems</li>
+                    <li>Municipal water treatment genset backup and aeration blowers</li>
+                </ul>
+            </div>
+            <div class="sector-card">
+                <h3>Palm Oil & Agriculture</h3>
+                <ul>
+                    <li>Palm oil mill biogas genset engine parts (Jenbacher, Cat, MWM)</li>
+                    <li>Food processing biogas power generation</li>
+                    <li>Municipal waste biogas plant maintenance</li>
+                    <li>Agricultural processing equipment engines</li>
+                    <li>Plantation genset, irrigation pump, and transport engine support</li>
+                </ul>
+            </div>
+            <div class="sector-card">
+                <h3>Processing & Manufacturing</h3>
+                <ul>
+                    <li>Hydrometallurgy processing plant 24/7 operations support</li>
+                    <li>Smelter and refinery auxiliary engine maintenance</li>
+                    <li>Industrial automation rotating equipment</li>
+                    <li>Factory genset and emergency power systems</li>
+                    <li>Legacy equipment obsolete part solutions</li>
+                    <li>Steel mill auxiliary engines and rolling mill drives</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why" id="why">
+    <div class="section-inner">
+        <div class="section-label">Why Clients Choose Us</div>
+        <h2 class="section-title">The Norwest Asia Difference</h2>
+        <p class="section-desc">We do not claim to be a one-stop supermarket. We are a specialized sourcing and technical support partner for organisations that operate medium-speed, legacy, and heavy-duty engine platforms where reliability, traceability, and engineering competence matter.</p>
+
+        <div class="why-grid">
+            <div class="why-card">
+                <h4>Official QuantiParts Distributor</h4>
+                <p>Direct access to genuine & OEM legacy parts networks in Norway and the Netherlands, with full traceability on every component.</p>
+            </div>
+            <div class="why-card">
+                <h4>European Supply Heritage</h4>
+                <p>Parts sourced through established technical partners with full material certification and genuine provenance documentation.</p>
+            </div>
+            <div class="why-card">
+                <h4>Legacy & Obsolete Specialization</h4>
+                <p>Support for engines no longer in production — where others cannot source, we find, certify, and deliver.</p>
+            </div>
+            <div class="why-card">
+                <h4>Flexible Supply Models</h4>
+                <p>From single critical spares to complete overhaul support packages, tailored to your operational urgency.</p>
+            </div>
+            <div class="why-card">
+                <h4>Transparent Commercial Terms</h4>
+                <p>Industry-aligned pricing with clear lead-time communication and no-obligation commercial benchmarks on request.</p>
+            </div>
+            <div class="why-card">
+                <h4>Responsive Regional Support</h4>
+                <p>Asian-based coordination with Norwegian engineering backing — globally deployable technical teams at short notice.</p>
+            </div>
+        </div>
+
+        <div class="approach-box">
+            <h3>Our Approach</h3>
+            <p>We work best as a <strong>strategic secondary channel</strong> — enhancing your procurement framework with flexibility, cost competitiveness, and responsive support when primary suppliers face long lead times, stock shortages, or discontinuation.</p>
+            <ul>
+                <li>Rapid technical confirmation and cross-referencing</li>
+                <li>Transparent pricing with full material certification</li>
+                <li>Realistic lead-time commitments</li>
+                <li>No-obligation commercial benchmarks on request</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="section-inner">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Let's Solve Your Engine Parts Challenge</h2>
+        <p class="section-desc">Send us your engine data, OEM part number, or dimensional specification. We'll identify the exact component and return a transparent quotation with lead times.</p>
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="icon">✉</div>
+                <div>
+                    <strong>Email</strong>
+                    <a href="mailto:norwestasia1@gmail.com">norwestasia1@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="icon">📞</div>
+                <div>
+                    <strong>Phone</strong>
+                    <a href="tel:+60128797198">+60 12-879 7198</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="icon">🌐</div>
+                <div>
+                    <strong>Parent Company</strong>
+                    <span>Norwest Marine Services AS, Norway</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="mailto:norwestasia1@gmail.com?subject=Parts%20Enquiry%20-%20Norwest%20Asia&body=Engine%20Brand%20/%20Model:%0AEngine%20Serial%20Number:%0AOEM%20Part%20Number%20(if%20known):%0ADescription%20of%20Required%20Parts:%0AQuantity:%0ARequired%20Delivery%20Date:%0A%0ACompany%20Name:%0AContact%20Person:%0APhone:%0A" class="btn btn-primary" style="font-size:16px; padding:16px 36px;">Send Parts Enquiry →</a>
+
+        <p class="contact-reg">All commercial transactions administered by Perjalanan Malaysia · Company Registration: 202603033065 (003820257-K)</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Norwest Asia — Asian Representative of <a href="https://norwestmarine.no" target="_blank">Norwest Marine Service AS, Norway</a>. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
